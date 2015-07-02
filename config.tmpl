@@ -1,0 +1,38 @@
+{
+    "servers": [
+        {
+            "host": "0.0.0.0",
+            "port": 8000,
+            "options": {
+                "payload": {
+                    "maxBytes": 5242880
+                },
+                "timeout": {
+                    "socket": false
+                }
+            }
+        }
+    ],
+    "plugins": {
+        "kappa": {
+            "vhost": null,
+            "paths": [
+                "http://couchapp:5984/registry/_design/app/_rewrite/",
+                "https://registry.npmjs.org/"
+            ]
+        },
+        "good": {
+            "reporters":  [
+                {
+                    "reporter": "require:good-console",
+                    "args": [{
+                        "request": "*",
+                        "log": "*",
+                        "error": "*",
+                        "ops": "*"
+                    }]
+                }
+            ]
+        }
+    }
+}
