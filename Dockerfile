@@ -2,7 +2,7 @@ FROM mhart/alpine-node:4
 
 MAINTAINER Jean-Charles Sisk <jeancharles@paypal.com>
 
-ENV KAPPA_VERSION 1.0.0-rc.11
+ENV KAPPA_VERSION 1.0.0-rc.14
 ENV GOOD_CONSOLE_VERSION ^2
 ENV GOOD_VERSION ^3
 ENV GOSU_VERSION 1.7
